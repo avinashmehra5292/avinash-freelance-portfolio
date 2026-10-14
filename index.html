@@ -86,7 +86,7 @@
           </button>
 
           <!-- Hire Me Primary CTA -->
-          <a href="#contact" class="btn btn-primary btn-sm">
+          <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">
             <span>Hire Me</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
               stroke-linejoin="round">
@@ -96,7 +96,7 @@
           </a>
 
           <!-- Mobile Hamburger -->
-          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -107,6 +107,8 @@
         </div>
       </nav>
     </div>
+    <!-- Mobile Navigation Backdrop Overlay -->
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
   </header>
 
   <!-- ========================================================================
@@ -494,7 +496,7 @@
                 <span class="step-num">3</span>
                 <h3 class="step-title">Desired Delivery Pace</h3>
               </div>
-              <div class="scope-pills-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="scope-pills-grid speed-pills-grid">
                 <div class="scope-pill speed-pill selected" data-speed="standard">
                   <div class="scope-pill-title">Standard</div>
                   <div class="scope-pill-desc">Methodical & structured</div>
@@ -819,39 +821,35 @@
        ======================================================================== -->
   <section class="about-section" id="about">
     <div class="container">
-      <div class="estimator-card" style="padding: 44px;">
+      <div class="estimator-card about-card">
         <div class="about-grid">
           <!-- Avatar Picture -->
-          <div
-            style="position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.5); border: 2px solid var(--border-medium);">
-            <img src="assets/images/avatar.png" alt="Avinash - Full-Stack Engineer"
-              style="width: 100%; height: auto; display: block; object-fit: cover;">
-            <div
-              style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(8, 10, 15, 0.85); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
-              <span style="font-size: 0.8rem; font-weight: 700; color: #fff;">Avinash 👨‍💻</span>
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-emerald);">● Online &
-                Coding</span>
+          <div class="about-avatar-wrap">
+            <img src="assets/images/avatar.png" alt="Avinash - Full-Stack Engineer" class="about-avatar-img">
+            <div class="about-avatar-badge">
+              <span class="about-avatar-name">Avinash 👨‍💻</span>
+              <span class="about-avatar-status">● Online & Coding</span>
             </div>
           </div>
 
           <!-- Bio Content -->
-          <div>
+          <div class="about-bio-content">
             <div class="section-tag" style="margin-bottom: 12px;">About The Craftsman</div>
-            <h2 style="font-size: 2.2rem; margin-bottom: 16px;">
+            <h2 class="about-heading">
               Passionate About <span class="gradient-text">Pixel-Perfection</span> & Clean Systems.
             </h2>
-            <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: 18px;">
+            <p class="about-lead">
               With over 5 years of engineering experience spanning venture-backed startups and high-impact digital
               ventures, I bridge the gap between design aesthetic brilliance and resilient full-stack architecture.
             </p>
-            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.75; margin-bottom: 24px;">
+            <p class="about-subtext">
               Whether architecting recurring meal delivery pipelines for <strong>Tiffinix</strong>, building
               ultra-luxury 3D portals for <strong>KR-ESTATE</strong>, or designing SaaS observability tools, I focus on
               what truly matters to you: <strong>shipping fast, writing maintainable code, and driving measurable client
                 revenue</strong>.
             </p>
 
-            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <div class="about-actions-row">
               <a href="#contact" class="btn btn-primary">
                 <span>Start a Project Together</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -1071,7 +1069,7 @@
       <div class="contact-grid">
         <!-- Left: Direct Channels & Status -->
         <div class="contact-info-panel">
-          <div class="glass-panel" style="padding: 32px;">
+          <div class="glass-panel contact-glass-panel">
             <div class="status-pill" style="margin-bottom: 20px;">
               <span class="status-dot"></span>
               <span>Available for New Projects</span>

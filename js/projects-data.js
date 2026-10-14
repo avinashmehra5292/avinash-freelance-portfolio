@@ -35,8 +35,8 @@ const PROJECTS_DATA = [
       ],
       testimonial: {
         quote: "Working with this developer completely transformed our customer retention. The meal customizer and instant checkout alone doubled our Monthly Recurring Revenue within 60 days.",
-        author: "Rahul S.",
-        role: "Founder & CEO, Tiffinix"
+        author: "Anshuman Ankit",
+        role: "CEO, Tiffinix"
       }
     }
   },
