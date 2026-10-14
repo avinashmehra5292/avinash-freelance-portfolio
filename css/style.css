@@ -74,25 +74,42 @@
   --bg-primary: #f8fafc;
   --bg-secondary: #f1f5f9;
   --bg-tertiary: #e2e8f0;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(255, 255, 255, 0.98);
-  --bg-glass: rgba(255, 255, 255, 0.75);
-  --bg-glass-heavy: rgba(255, 255, 255, 0.92);
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --bg-glass-heavy: rgba(255, 255, 255, 0.95);
+
+  /* High-Contrast Accents for Daylight Mode (minimum 5:1 contrast on white) */
+  --accent-cyan: #0284c7;
+  --accent-blue: #2563eb;
+  --accent-purple: #7c3aed;
+  --accent-violet: #6d28d9;
+  --accent-pink: #db2777;
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+
+  /* Rich, vivid gradients with high readability on white */
+  --gradient-primary: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%);
+  --gradient-accent: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+  --gradient-cyan-emerald: linear-gradient(135deg, #0284c7 0%, #059669 100%);
+  --gradient-gold: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 100%);
 
   --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --text-secondary: #334155;
   --text-muted: #64748b;
   --text-highlight: #020617;
 
   --border-subtle: rgba(0, 0, 0, 0.08);
-  --border-medium: rgba(0, 0, 0, 0.16);
-  --border-glow: rgba(0, 160, 230, 0.4);
+  --border-medium: rgba(0, 0, 0, 0.14);
+  --border-glow: rgba(2, 132, 199, 0.45);
 
-  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.09);
-  --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
-  --glow-cyan: 0 0 30px rgba(0, 160, 230, 0.15);
-  --glow-violet: 0 0 30px rgba(121, 40, 202, 0.15);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 18px 45px rgba(15, 23, 42, 0.1);
+  --glow-cyan: 0 0 25px rgba(2, 132, 199, 0.15);
+  --glow-violet: 0 0 25px rgba(124, 58, 237, 0.15);
+  --glow-accent: 0 0 30px rgba(37, 99, 235, 0.18);
 }
 
 /* Base Resets */

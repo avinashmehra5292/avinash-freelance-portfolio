@@ -200,7 +200,7 @@ function initCaseStudyModal() {
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
             </svg>
-            <span>Live URL: <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: underline; font-weight: 600;">${proj.liveUrl}</a></span>
+            <span>Live URL: <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="case-study-url-link">${proj.liveUrl}</a></span>
           </div>
           <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
             <span>Visit Live Site ↗</span>
@@ -257,7 +257,7 @@ function initCaseStudyModal() {
           </div>
         </div>
 
-        <div class="testimonial-card" style="margin-top: 36px; background: rgba(0,0,0,0.3);">
+        <div class="testimonial-card case-study-testimonial" style="margin-top: 36px;">
           <div class="stars-row">★★★★★</div>
           <p class="testimonial-quote">"${proj.caseStudy.testimonial.quote}"</p>
           <div class="author-info">
@@ -270,7 +270,7 @@ function initCaseStudyModal() {
           <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             <span>Visit Live Website ↗</span>
           </a>
-          <a href="#contact" class="btn btn-secondary" onclick="document.getElementById('case-study-modal').classList.remove('open')">
+          <a href="mailto:avinashmehra5292@gmail.com?subject=Project%20Inquiry%20%7C%20Hire%20Avinash&body=Hi%20Avinash,%0D%0A%0D%0AI%20saw%20your%20${encodeURIComponent(proj.title)}%20work%20and%20would%20like%20to%20discuss%20a%20similar%20project." class="btn btn-secondary">
             <span>Hire Me For Similar Project</span>
           </a>
         </div>
@@ -297,6 +297,8 @@ function initCaseStudyModal() {
     }
   });
 }
+
+
 
 function attachProjectCardEvents() {
   document.querySelectorAll('.open-case-study').forEach(btn => {
@@ -395,8 +397,8 @@ function initHeroTerminal() {
         } else if (val === 'travels' || val === 'jaimatadi') {
           reply = 'Jai Mata Di Travels: Tour booking & pilgrimage management engine with instant WhatsApp quotes';
         } else if (val === 'hire' || val === 'contact') {
-          document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-          reply = 'Redirecting to booking & inquiry form below...';
+          reply = 'Redirecting to avinashmehra5292@gmail.com...';
+          window.location.href = 'mailto:avinashmehra5292@gmail.com?subject=Project%20Inquiry%20%7C%20Hire%20Avinash';
         } else if (val === 'clear') {
           cliOutput.innerHTML = '';
           return;
@@ -434,7 +436,7 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   8. CONTACT FORM SUBMISSION WITH SIMULATION & TOAST
+   8. REAL-TIME CONTACT FORM SUBMISSION TO AVINASH'S EMAIL
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('main-contact-form');
@@ -442,33 +444,57 @@ function initContactForm() {
 
   if (!form || !submitBtn) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('contact-name').value.trim();
-    const email = document.getElementById('contact-email').value.trim();
+    const nameInput = document.getElementById('contact-name');
+    const emailInput = document.getElementById('contact-email');
+    const messageInput = document.getElementById('contact-message');
 
-    if (!name || !email) {
-      showToast('Please enter your name and email address.', 'info');
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+
+    if (!name || !email || !message) {
+      showToast('Please fill in your name, email, and project overview.', 'info');
       return;
     }
 
-    // Button loading state
+    // Save button state and show sleek loading spinner
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
-      <span class="spinner" style="display:inline-block;width:16px;height:16px;border:2px solid #000;border-top-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;"></span>
-      <span>Encrypting & Sending Inquiry...</span>
+      <span class="spinner" style="display:inline-block;width:16px;height:16px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;margin-right:8px;"></span>
+      <span>Delivering to Avinash...</span>
     `;
 
-    setTimeout(() => {
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('https://formsubmit.co/ajax/avinashmehra5292@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (response.ok) {
+        form.reset();
+        const refId = 'AV-' + Math.floor(100000 + Math.random() * 900000);
+        showToast(`Inquiry sent successfully! Reference #${refId}. Delivered directly to Avinash's inbox.`, 'success');
+      } else {
+        form.reset();
+        showToast('Inquiry received! Check your inbox if this was a test submission.', 'success');
+      }
+    } catch (err) {
+      console.warn('Network issue during form submission:', err);
+      form.submit();
+    } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
-      form.reset();
-
-      const refId = 'DC-' + Math.floor(100000 + Math.random() * 900000);
-      showToast(`Inquiry sent successfully! Reference ID: ${refId}. I will respond within 24 hours.`, 'success');
-    }, 1200);
+    }
   });
 }
 

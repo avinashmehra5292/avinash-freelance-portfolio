@@ -52,11 +52,10 @@
 
         <!-- Desktop Navigation Links -->
         <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#estimator" class="nav-link">Cost Calculator</a></li>
           <li><a href="#process" class="nav-link">Process</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
           <!-- <li><a href="#reviews" class="nav-link">Reviews</a></li> -->
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -86,7 +85,8 @@
           </button>
 
           <!-- Hire Me Primary CTA -->
-          <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">
+          <a href="mailto:avinashmehra5292@gmail.com?subject=Project%20Inquiry%20%7C%20Hire%20Avinash&body=Hi%20Avinash,%0D%0A%0D%0AI'm%20reaching%20out%20to%20discuss%20a%20new%20project:%0D%0A%0D%0A-%20Project%20Type:%20%0D%0A-%20Estimated%20Budget:%20%0D%0A-%20Target%20Timeline:%20%0D%0A-%20Project%20Overview:%20"
+            class="btn btn-primary btn-sm nav-cta-btn">
             <span>Hire Me</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
               stroke-linejoin="round">
@@ -154,42 +154,6 @@
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            <a href="#estimator" class="btn btn-secondary btn-lg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-                <line x1="8" y1="6" x2="16" y2="6"></line>
-                <line x1="16" y1="14" x2="16" y2="18"></line>
-                <path d="M16 10h.01"></path>
-                <path d="M12 10h.01"></path>
-                <path d="M8 10h.01"></path>
-                <path d="M12 14h.01"></path>
-                <path d="M8 14h.01"></path>
-                <path d="M12 18h.01"></path>
-                <path d="M8 18h.01"></path>
-              </svg>
-              <span>Calculate Project Scope</span>
-            </a>
-          </div>
-
-          <!-- Hero Metrics -->
-          <div class="hero-stats-bar">
-            <div class="stat-item">
-              <span class="stat-number">18+</span>
-              <span class="stat-label">Production Apps</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">99.4%</span>
-              <span class="stat-label">Client Satisfaction</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">&lt;700ms</span>
-              <span class="stat-label">Avg Core Web Vitals</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">$42M+</span>
-              <span class="stat-label">Client Value Driven</span>
-            </div>
           </div>
         </div>
 
@@ -269,88 +233,55 @@
   </section>
 
   <!-- ========================================================================
-       3. CLIENTS & BRANDS MARQUEE
+       2. ABOUT THE CRAFTSMAN
        ======================================================================== -->
-  <section class="marquee-section" aria-label="Clients and Platforms">
+  <section class="about-section" id="about">
     <div class="container">
-      <div class="marquee-heading">Trusted By Fast-Growing Startups & Ambitious Founders Globally</div>
-    </div>
-    <div class="marquee-track" aria-hidden="true">
-      <!-- Item 1 -->
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">🍲</div>
-        <span>TIFFINIX</span>
-      </div>
-      <!-- Item 2 -->
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(234, 179, 8, 0.15); color: #eab308;">🏛️</div>
-        <span>KR-ESTATE</span>
-      </div>
-      <!-- Item 3 -->
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">💎</div>
-        <span>SHRI RATNA JEWELLERS</span>
-      </div>
-      <!-- Item 4 -->
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">✈️</div>
-        <span>JAI MATA DI TRAVELS</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">🍲</div>
-        <span>TIFFINIX</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(234, 179, 8, 0.15); color: #eab308;">🏛️</div>
-        <span>KR-ESTATE</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">💎</div>
-        <span>SHRI RATNA JEWELLERS</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">✈️</div>
-        <span>JAI MATA DI TRAVELS</span>
-      </div>
+      <div class="about-card">
+        <div class="about-grid">
+          <!-- Avatar Picture -->
+          <div class="about-avatar-wrap">
+            <img src="assets/images/avatar.png" alt="Avinash - Full-Stack Engineer" class="about-avatar-img">
+            <div class="about-avatar-badge">
+              <span class="about-avatar-name">Full Stack Developer</span>
+              <span class="about-avatar-status">Avinash Mehra</span>
+            </div>
+          </div>
 
-      <!-- Duplicate for seamless infinite loop -->
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">🍲</div>
-        <span>TIFFINIX</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(234, 179, 8, 0.15); color: #eab308;">🏛️</div>
-        <span>KR-ESTATE</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">💎</div>
-        <span>SHRI RATNA JEWELLERS</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">✈️</div>
-        <span>JAI MATA DI TRAVELS</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">🍲</div>
-        <span>TIFFINIX</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(234, 179, 8, 0.15); color: #eab308;">🏛️</div>
-        <span>KR-ESTATE</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">💎</div>
-        <span>SHRI RATNA JEWELLERS</span>
-      </div>
-      <div class="client-logo-item">
-        <div class="client-icon-badge" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">✈️</div>
-        <span>JAI MATA DI TRAVELS</span>
+          <!-- Bio Content -->
+          <div class="about-bio-content">
+            <div class="section-tag" style="margin-bottom: 12px;">About The Craftsman</div>
+            <h2 class="about-heading">
+              Passionate About <span class="gradient-text">Pixel-Perfection</span> & Clean Systems.
+            </h2>
+            <p class="about-lead">
+              With over 5 years of engineering experience spanning venture-backed startups and high-impact digital
+              ventures, I bridge the gap between design aesthetic brilliance and resilient full-stack architecture.
+            </p>
+            <p class="about-subtext">
+              Whether architecting recurring meal delivery pipelines for <strong>Tiffinix</strong>, building
+              ultra-luxury 3D portals for <strong>KR-ESTATE</strong>, or designing SaaS observability tools, I focus on
+              what truly matters to you: <strong>shipping fast, writing maintainable code, and driving measurable client
+                revenue</strong>.
+            </p>
+
+            <div class="about-actions-row">
+              <a href="#contact" class="btn btn-primary">
+                <span>Start a Project Together</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================================================
-       4. FEATURED PROJECTS SHOWCASE
+       3. FEATURED PROJECTS SHOWCASE
        ======================================================================== -->
   <section class="projects-section" id="projects">
     <div class="container">
@@ -404,162 +335,10 @@
     </div>
   </div>
 
-  <!-- ========================================================================
-       5. INTERACTIVE PROJECT SCOPE & COST ESTIMATOR
-       ======================================================================== -->
-  <section class="estimator-section" id="estimator">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-          <span>Transparent Pricing & Timeline</span>
-        </div>
-        <h2 class="section-title">
-          Interactive <span class="gradient-text">Project Scope Estimator</span>.
-        </h2>
-        <p class="section-subtitle">
-          No vague estimates or surprise invoices. Select your requirements below to instantly generate a realistic
-          ballpark budget, timeline, and recommended tech stack.
-        </p>
-      </div>
 
-      <div class="estimator-card" id="project-estimator">
-        <div class="estimator-grid">
-          <!-- Left Controls -->
-          <div class="estimator-controls">
-            <!-- Step 1: Project Archetype -->
-            <div class="estimator-step">
-              <div class="step-header">
-                <span class="step-num">1</span>
-                <h3 class="step-title">Select Your Project Archetype</h3>
-              </div>
-              <div class="scope-pills-grid">
-                <div class="scope-pill" data-type="landing">
-                  <div class="scope-pill-title">High-Converting Landing Page</div>
-                  <div class="scope-pill-desc">Speed-optimized, bespoke motion & conversion focus</div>
-                </div>
-                <div class="scope-pill selected" data-type="webapp">
-                  <div class="scope-pill-title">Full-Stack Web App</div>
-                  <div class="scope-pill-desc">Modern SPA/SSR with database, auth & APIs</div>
-                </div>
-                <div class="scope-pill" data-type="ecommerce">
-                  <div class="scope-pill-title">E-Commerce / FoodTech Platform</div>
-                  <div class="scope-pill-desc">Like Tiffinix: recurring subs, cart & checkout</div>
-                </div>
-                <div class="scope-pill" data-type="saas">
-                  <div class="scope-pill-title">SaaS MVP / Dashboard</div>
-                  <div class="scope-pill-desc">Telemetries, multi-tenant roles & real-time charts</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 2: Key Features & Capabilities -->
-            <div class="estimator-step">
-              <div class="step-header">
-                <span class="step-num">2</span>
-                <h3 class="step-title">Select Additional Deliverables & Add-ons</h3>
-              </div>
-              <div class="feature-checkbox-grid">
-                <label class="feature-check-label">
-                  <input type="checkbox" class="feature-check-input" value="ui_motion" checked>
-                  <span>Bespoke UI/UX & Micro-interactions</span>
-                </label>
-                <label class="feature-check-label">
-                  <input type="checkbox" class="feature-check-input" value="auth_roles" checked>
-                  <span>User Authentication & RBAC Roles</span>
-                </label>
-                <label class="feature-check-label">
-                  <input type="checkbox" class="feature-check-input" value="payments">
-                  <span>Stripe Billing & Subscriptions</span>
-                </label>
-                <label class="feature-check-label">
-                  <input type="checkbox" class="feature-check-input" value="cms_admin">
-                  <span>Custom CMS & Admin Back-office</span>
-                </label>
-                <label class="feature-check-label">
-                  <input type="checkbox" class="feature-check-input" value="ai_api">
-                  <span>AI Workflows & Third-Party APIs</span>
-                </label>
-                <label class="feature-check-label">
-                  <input type="checkbox" class="feature-check-input" value="seo_speed" checked>
-                  <span>95+ Lighthouse Score & Semantic SEO</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Step 3: Timeline Urgency -->
-            <div class="estimator-step">
-              <div class="step-header">
-                <span class="step-num">3</span>
-                <h3 class="step-title">Desired Delivery Pace</h3>
-              </div>
-              <div class="scope-pills-grid speed-pills-grid">
-                <div class="scope-pill speed-pill selected" data-speed="standard">
-                  <div class="scope-pill-title">Standard</div>
-                  <div class="scope-pill-desc">Methodical & structured</div>
-                </div>
-                <div class="scope-pill speed-pill" data-speed="accelerated">
-                  <div class="scope-pill-title">Accelerated</div>
-                  <div class="scope-pill-desc">Fast-track sprint</div>
-                </div>
-                <div class="scope-pill speed-pill" data-speed="express">
-                  <div class="scope-pill-title">Dedicated Rush</div>
-                  <div class="scope-pill-desc">100% focused priority</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Dynamic Summary Box -->
-          <div class="estimator-summary-panel">
-            <div>
-              <div class="summary-badge">Live Scope Calculation</div>
-
-              <div class="price-estimate-box">
-                <div class="price-estimate-label">Estimated Investment Range</div>
-                <div class="price-estimate-value" id="calc-price-display">$3,600 - $4,300</div>
-              </div>
-
-              <div class="timeline-estimate-row">
-                <span style="color: var(--text-secondary);">Target Delivery Window:</span>
-                <strong id="calc-timeline-display" style="color: var(--accent-cyan); font-family: var(--font-mono);">3 -
-                  4 Weeks</strong>
-              </div>
-
-              <div style="margin-bottom: 20px;">
-                <div style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 6px;">Recommended Architectural
-                  Stack:</div>
-                <div id="calc-stack-display"
-                  style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">
-                  Next.js 15, TypeScript, Tailwind, Node.js, PostgreSQL</div>
-              </div>
-
-              <div style="margin-bottom: 12px; font-size: 0.88rem; font-weight: 700; color: var(--text-highlight);">
-                Included in this Scope:</div>
-              <ul class="deliverables-list" id="calc-deliverables-list">
-                <!-- Javascript fills this -->
-              </ul>
-            </div>
-
-            <button class="btn btn-primary btn-lg" id="lock-scope-btn" style="width: 100%;">
-              <span>Lock In Scope & Inquire</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========================================================================
-       6. CORE SERVICES & VALUE PILLARS
+       5. CORE SERVICES & VALUE PILLARS
        ======================================================================== -->
   <section class="services-section" id="services">
     <div class="container">
@@ -816,60 +595,7 @@
     </div>
   </section>
 
-  <!-- ========================================================================
-       8. ABOUT THE CRAFTSMAN
-       ======================================================================== -->
-  <section class="about-section" id="about">
-    <div class="container">
-      <div class="estimator-card about-card">
-        <div class="about-grid">
-          <!-- Avatar Picture -->
-          <div class="about-avatar-wrap">
-            <img src="assets/images/avatar.png" alt="Avinash - Full-Stack Engineer" class="about-avatar-img">
-            <div class="about-avatar-badge">
-              <span class="about-avatar-name">Avinash 👨‍💻</span>
-              <span class="about-avatar-status">● Online & Coding</span>
-            </div>
-          </div>
 
-          <!-- Bio Content -->
-          <div class="about-bio-content">
-            <div class="section-tag" style="margin-bottom: 12px;">About The Craftsman</div>
-            <h2 class="about-heading">
-              Passionate About <span class="gradient-text">Pixel-Perfection</span> & Clean Systems.
-            </h2>
-            <p class="about-lead">
-              With over 5 years of engineering experience spanning venture-backed startups and high-impact digital
-              ventures, I bridge the gap between design aesthetic brilliance and resilient full-stack architecture.
-            </p>
-            <p class="about-subtext">
-              Whether architecting recurring meal delivery pipelines for <strong>Tiffinix</strong>, building
-              ultra-luxury 3D portals for <strong>KR-ESTATE</strong>, or designing SaaS observability tools, I focus on
-              what truly matters to you: <strong>shipping fast, writing maintainable code, and driving measurable client
-                revenue</strong>.
-            </p>
-
-            <div class="about-actions-row">
-              <a href="#contact" class="btn btn-primary">
-                <span>Start a Project Together</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-              <button class="btn btn-secondary copy-email-btn" data-email="avinashmehra5292@gmail.com">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                <span>Copy Direct Email</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========================================================================
        9. VERIFIED CLIENT REVIEWS & TESTIMONIALS (COMMENTED OUT)
@@ -1121,9 +847,10 @@
               </a>
 
               <!-- Channel 3: GitHub -->
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+              <a href="https://github.com/avinashmehra5292?tab=repositories" target="_blank" rel="noopener noreferrer"
+                class="contact-card-link">
                 <div class="contact-channel-left">
-                  <div class="contact-channel-icon" style="background: rgba(255, 255, 255, 0.08); color: #fff;">
+                  <div class="contact-channel-icon github-channel-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path
                         d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
@@ -1145,22 +872,31 @@
 
         <!-- Right: Inquiry Form -->
         <div class="contact-form-panel">
-          <form id="main-contact-form">
+          <form id="main-contact-form" action="https://formsubmit.co/avinashmehra5292@gmail.com" method="POST">
+            <!-- FormSubmit Anti-Spam & Configuration -->
+            <input type="hidden" name="_subject" value="🚀 New Project Inquiry via Avinash.dev">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+
             <div class="form-row-2">
               <div class="form-group">
                 <label for="contact-name" class="form-label">Your Name *</label>
-                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+                <input type="text" id="contact-name" name="Client Name" class="form-input"
+                  placeholder="e.g. Sarah Jenkins" required>
               </div>
               <div class="form-group">
                 <label for="contact-email" class="form-label">Your Email *</label>
-                <input type="email" id="contact-email" class="form-input" placeholder="e.g. sarah@startup.com" required>
+                <input type="email" id="contact-email" name="Client Email" class="form-input"
+                  placeholder="e.g. sarah@startup.com" required>
               </div>
             </div>
 
             <div class="form-row-2">
               <div class="form-group">
                 <label for="contact-project-type" class="form-label">Project Type</label>
-                <select id="contact-project-type" class="form-select">
+                <select id="contact-project-type" name="Project Archetype" class="form-select">
+                  <option value="" disabled selected>Select project type...</option>
                   <option value="Full-Stack Web App">Full-Stack Web App</option>
                   <option value="E-Commerce / FoodTech">E-Commerce / FoodTech (Like Tiffinix)</option>
                   <option value="PropTech & Real Estate">PropTech & Real Estate (Like KR-ESTATE)</option>
@@ -1172,19 +908,15 @@
 
               <div class="form-group">
                 <label for="contact-budget" class="form-label">Estimated Budget</label>
-                <select id="contact-budget" class="form-select">
-                  <option value="$1,500 - $3,000">$1,500 - $3,000</option>
-                  <option value="$3,000 - $5,000" selected>$3,000 - $5,000</option>
-                  <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                  <option value="$10,000+">$10,000+ (Enterprise Scope)</option>
-                </select>
+                <input type="text" id="contact-budget" name="Estimated Budget" class="form-input"
+                  placeholder="Enter your estimated budget">
               </div>
             </div>
 
             <div class="form-group">
               <label for="contact-message" class="form-label">Project Overview & Goals *</label>
-              <textarea id="contact-message" rows="5" class="form-textarea"
-                placeholder="Describe your vision, target timeline, key feature wishlist, or scope from the calculator..."
+              <textarea id="contact-message" name="Project Overview & Goals" rows="5" class="form-textarea"
+                placeholder="Describe your vision, target timeline, key feature wishlist, or project goals..."
                 required></textarea>
             </div>
 
@@ -1224,9 +956,9 @@
         <div class="footer-col">
           <h5>Navigation</h5>
           <ul class="footer-links">
+            <li><a href="#about">About Avinash</a></li>
             <li><a href="#projects">Selected Projects</a></li>
             <li><a href="#services">Specialized Services</a></li>
-            <li><a href="#estimator">Scope & Cost Estimator</a></li>
             <li><a href="#process">Development Roadmap</a></li>
             <li><a href="#contact">Book Discovery Call</a></li>
           </ul>
@@ -1260,7 +992,6 @@
 
   <!-- Scripts -->
   <script src="js/projects-data.js"></script>
-  <script src="js/calculator.js"></script>
   <script src="js/main.js"></script>
 </body>
 
