@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avinash | Senior Freelance Web Developer & Full-Stack Architect</title>
+  <meta name="description"
+    content="Senior Full-Stack Freelance Web Developer & UI/UX Specialist. Creator of Tiffinix, KR-ESTATE, and high-performance digital products that scale revenue. Available for select freelance contracts.">
+  <meta name="keywords"
+    content="Freelance Web Developer, Full-Stack Engineer, Next.js Developer, React Developer, Tiffinix, KR-ESTATE, UI/UX Designer, Hire Web Developer">
+  <meta name="author" content="Avinash">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Avinash | Senior Freelance Web Developer & Full-Stack Architect">
+  <meta property="og:description"
+    content="High-impact freelance web applications, bespoke UI/UX, and digital products. Featured works: Tiffinix, KR-ESTATE.">
+  <meta property="og:image" content="assets/images/krestates.jpg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+  <!-- Ambient Glow Background Orbs -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+
+  <!-- ========================================================================
+       1. NAVIGATION HEADER
+       ======================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="#hero" class="brand-logo" aria-label="Home">
+          <span class="brand-icon">A</span>
+          <span>Avinash<span class="brand-dot">.dev</span> 💻</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#estimator" class="nav-link">Cost Calculator</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <!-- <li><a href="#reviews" class="nav-link">Reviews</a></li> -->
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Nav Actions & Mobile Toggle -->
+        <div class="nav-actions">
+          <!-- Theme Switcher -->
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+            <!-- Moon Icon (Dark Mode) -->
+            <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <!-- Sun Icon (Light Mode) -->
+            <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- Hire Me Primary CTA -->
+          <a href="#contact" class="btn btn-primary btn-sm">
+            <span>Hire Me</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Left: Pitch & Value Proposition -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>Available for 2 Projects (Q4 Kickoff)</span>
+            </div>
+            <div class="hero-role-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <span>Senior Full-Stack Architect</span>
+            </div>
+          </div>
+
+          <h1 class="hero-headline">
+            Transforming Bold Visions Into <span class="gradient-text">High-Converting</span> Digital Realities.
+          </h1>
+
+          <p class="hero-description">
+            I engineer lightning-fast full-stack web applications, bespoke UI/UX platforms, and scalable digital
+            architectures that captivate users and accelerate revenue. Creator of standout platforms including
+            <strong>Tiffinix</strong> and <strong>KR-ESTATE</strong>.
+          </p>
+
+          <div class="hero-cta-cluster">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <span>Explore Selected Works</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#estimator" class="btn btn-secondary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="16" y1="14" x2="16" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              <span>Calculate Project Scope</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <span class="stat-number">18+</span>
+              <span class="stat-label">Production Apps</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">99.4%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">&lt;700ms</span>
+              <span class="stat-label">Avg Core Web Vitals</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">$42M+</span>
+              <span class="stat-label">Client Value Driven</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: Interactive Code Window -->
+        <div class="hero-interactive-column">
+          <div class="terminal-window" id="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <div class="terminal-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                <span>engineer.config.ts</span>
+              </div>
+              <span class="terminal-badge">LIVE_STATUS: READY</span>
+            </div>
+
+            <!-- Terminal Tabs -->
+            <div class="terminal-tabs">
+              <button class="terminal-tab active" data-tab="stack">stack.ts</button>
+              <button class="terminal-tab" data-tab="metrics">metrics.json</button>
+              <button class="terminal-tab" data-tab="terminal">interactive_cli.sh</button>
+            </div>
+
+            <!-- Terminal Code Body -->
+            <div class="terminal-body" id="terminal-code-body">
+              <div class="code-line"><span class="line-num">1</span><span class="line-code"><span
+                    class="code-keyword">export const</span> <span class="code-var">developerProfile</span> = {</span>
+              </div>
+              <div class="code-line"><span class="line-num">2</span><span class="line-code"> craftsman: <span
+                    class="code-string">"Avinash // Senior Full-Stack Engineer"</span>,</span></div>
+              <div class="code-line"><span class="line-num">3</span><span class="line-code"> experience: <span
+                    class="code-string">"5+ Years Crafting Scalable Systems"</span>,</span></div>
+              <div class="code-line"><span class="line-num">4</span><span class="line-code"> flagshipProjects: [<span
+                    class="code-string">"Tiffinix"</span>, <span class="code-string">"KR-ESTATE"</span>, <span
+                    class="code-string">"Shri Ratna Jewellers"</span>, <span class="code-string">"Jai Mata Di
+                    Travels"</span>],</span></div>
+              <div class="code-line"><span class="line-num">5</span><span class="line-code"> coreStack: {</span></div>
+              <div class="code-line"><span class="line-num">6</span><span class="line-code"> frontend: [<span
+                    class="code-string">"Next.js 15"</span>, <span class="code-string">"React"</span>, <span
+                    class="code-string">"TypeScript"</span>, <span class="code-string">"Three.js"</span>],</span></div>
+              <div class="code-line"><span class="line-num">7</span><span class="line-code"> backend: [<span
+                    class="code-string">"Node.js"</span>, <span class="code-string">"PostgreSQL"</span>, <span
+                    class="code-string">"Redis"</span>, <span class="code-string">"Stripe"</span>],</span></div>
+              <div class="code-line"><span class="line-num">8</span><span class="line-code"> cloud: [<span
+                    class="code-string">"AWS"</span>, <span class="code-string">"Docker"</span>, <span
+                    class="code-string">"Vercel"</span>, <span class="code-string">"Cloudflare"</span>]</span></div>
+              <div class="code-line"><span class="line-num">9</span><span class="line-code"> },</span></div>
+              <div class="code-line"><span class="line-num">10</span><span class="line-code"> availability: <span
+                    class="code-string">"SELECT_CONTRACTS_OPEN"</span>,</span></div>
+              <div class="code-line"><span class="line-num">11</span><span class="line-code"> codeQualityScore: <span
+                    class="code-string">"98/100"</span>,</span></div>
+              <div class="code-line"><span class="line-num">12</span><span class="line-code"> readyToDeliver: <span
+                    class="code-bool">true</span></span></div>
+              <div class="code-line"><span class="line-num">13</span><span class="line-code">};</span></div>
+            </div>
+
+            <!-- Terminal CLI Input -->
+            <div class="terminal-cli-wrap" style="padding: 12px 18px; background: rgba(0,0,0,0.3);">
+              <div id="cli-history"></div>
+              <div class="terminal-cli-prompt">
+                <span class="cli-arrow">avinash@craft:~$</span>
+                <input type="text" id="cli-input" class="cli-input"
+                  placeholder="type 'skills', 'tiffinix', or 'hire' and press Enter..." autocomplete="off">
+              </div>
+              <div class="cli-hint">Tip: Try running commands right inside the terminal</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. CLIENTS & BRANDS MARQUEE
+       ======================================================================== -->
+  <section class="marquee-section" aria-label="Clients and Platforms">
+    <div class="container">
+      <div class="marquee-heading">Trusted By Fast-Growing Startups & Ambitious Founders Globally</div>
+    </div>
+    <div class="marquee-track" aria-hidden="true">
+      <!-- Item 1 -->
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">🍲</div>
+        <span>TIFFINIX</span>
+      </div>
+      <!-- Item 2 -->
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(234, 179, 8, 0.15); color: #eab308;">🏛️</div>
+        <span>KR-ESTATE</span>
+      </div>
+      <!-- Item 3 -->
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">💎</div>
+        <span>SHRI RATNA JEWELLERS</span>
+      </div>
+      <!-- Item 4 -->
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">✈️</div>
+        <span>JAI MATA DI TRAVELS</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">🍲</div>
+        <span>TIFFINIX</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(234, 179, 8, 0.15); color: #eab308;">🏛️</div>
+        <span>KR-ESTATE</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">💎</div>
+        <span>SHRI RATNA JEWELLERS</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">✈️</div>
+        <span>JAI MATA DI TRAVELS</span>
+      </div>
+
+      <!-- Duplicate for seamless infinite loop -->
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">🍲</div>
+        <span>TIFFINIX</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(234, 179, 8, 0.15); color: #eab308;">🏛️</div>
+        <span>KR-ESTATE</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">💎</div>
+        <span>SHRI RATNA JEWELLERS</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">✈️</div>
+        <span>JAI MATA DI TRAVELS</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">🍲</div>
+        <span>TIFFINIX</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(234, 179, 8, 0.15); color: #eab308;">🏛️</div>
+        <span>KR-ESTATE</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">💎</div>
+        <span>SHRI RATNA JEWELLERS</span>
+      </div>
+      <div class="client-logo-item">
+        <div class="client-icon-badge" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">✈️</div>
+        <span>JAI MATA DI TRAVELS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. FEATURED PROJECTS SHOWCASE
+       ======================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span>Curated Engineering Portfolio</span>
+        </div>
+        <h2 class="section-title">
+          Proven Work That Speaks In <span class="gradient-text">Results & Speed</span>.
+        </h2>
+        <p class="section-subtitle">
+          Every project is built with obsessively clean code, sub-second performance, bespoke UI/UX, and robust
+          infrastructure engineered for sustained business growth.
+        </p>
+      </div>
+
+      <!-- Project Category Filters -->
+      <div class="project-filters" role="tablist">
+        <button class="filter-btn active" data-category="all" role="tab">All Projects (4)</button>
+        <button class="filter-btn" data-category="foodtech" role="tab">FoodTech & Subscription</button>
+        <button class="filter-btn" data-category="proptech" role="tab">PropTech & Real Estate</button>
+        <button class="filter-btn" data-category="ecommerce" role="tab">Jewellery E-Commerce</button>
+        <button class="filter-btn" data-category="travel" role="tab">Travel & Tourism</button>
+      </div>
+
+      <!-- Projects Grid (Dynamically Rendered from PROJECTS_DATA) -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Javascript renders cards here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Modal Container -->
+  <div class="modal-backdrop" id="case-study-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="modal-dynamic-body">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       5. INTERACTIVE PROJECT SCOPE & COST ESTIMATOR
+       ======================================================================== -->
+  <section class="estimator-section" id="estimator">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>Transparent Pricing & Timeline</span>
+        </div>
+        <h2 class="section-title">
+          Interactive <span class="gradient-text">Project Scope Estimator</span>.
+        </h2>
+        <p class="section-subtitle">
+          No vague estimates or surprise invoices. Select your requirements below to instantly generate a realistic
+          ballpark budget, timeline, and recommended tech stack.
+        </p>
+      </div>
+
+      <div class="estimator-card" id="project-estimator">
+        <div class="estimator-grid">
+          <!-- Left Controls -->
+          <div class="estimator-controls">
+            <!-- Step 1: Project Archetype -->
+            <div class="estimator-step">
+              <div class="step-header">
+                <span class="step-num">1</span>
+                <h3 class="step-title">Select Your Project Archetype</h3>
+              </div>
+              <div class="scope-pills-grid">
+                <div class="scope-pill" data-type="landing">
+                  <div class="scope-pill-title">High-Converting Landing Page</div>
+                  <div class="scope-pill-desc">Speed-optimized, bespoke motion & conversion focus</div>
+                </div>
+                <div class="scope-pill selected" data-type="webapp">
+                  <div class="scope-pill-title">Full-Stack Web App</div>
+                  <div class="scope-pill-desc">Modern SPA/SSR with database, auth & APIs</div>
+                </div>
+                <div class="scope-pill" data-type="ecommerce">
+                  <div class="scope-pill-title">E-Commerce / FoodTech Platform</div>
+                  <div class="scope-pill-desc">Like Tiffinix: recurring subs, cart & checkout</div>
+                </div>
+                <div class="scope-pill" data-type="saas">
+                  <div class="scope-pill-title">SaaS MVP / Dashboard</div>
+                  <div class="scope-pill-desc">Telemetries, multi-tenant roles & real-time charts</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Key Features & Capabilities -->
+            <div class="estimator-step">
+              <div class="step-header">
+                <span class="step-num">2</span>
+                <h3 class="step-title">Select Additional Deliverables & Add-ons</h3>
+              </div>
+              <div class="feature-checkbox-grid">
+                <label class="feature-check-label">
+                  <input type="checkbox" class="feature-check-input" value="ui_motion" checked>
+                  <span>Bespoke UI/UX & Micro-interactions</span>
+                </label>
+                <label class="feature-check-label">
+                  <input type="checkbox" class="feature-check-input" value="auth_roles" checked>
+                  <span>User Authentication & RBAC Roles</span>
+                </label>
+                <label class="feature-check-label">
+                  <input type="checkbox" class="feature-check-input" value="payments">
+                  <span>Stripe Billing & Subscriptions</span>
+                </label>
+                <label class="feature-check-label">
+                  <input type="checkbox" class="feature-check-input" value="cms_admin">
+                  <span>Custom CMS & Admin Back-office</span>
+                </label>
+                <label class="feature-check-label">
+                  <input type="checkbox" class="feature-check-input" value="ai_api">
+                  <span>AI Workflows & Third-Party APIs</span>
+                </label>
+                <label class="feature-check-label">
+                  <input type="checkbox" class="feature-check-input" value="seo_speed" checked>
+                  <span>95+ Lighthouse Score & Semantic SEO</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3: Timeline Urgency -->
+            <div class="estimator-step">
+              <div class="step-header">
+                <span class="step-num">3</span>
+                <h3 class="step-title">Desired Delivery Pace</h3>
+              </div>
+              <div class="scope-pills-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="scope-pill speed-pill selected" data-speed="standard">
+                  <div class="scope-pill-title">Standard</div>
+                  <div class="scope-pill-desc">Methodical & structured</div>
+                </div>
+                <div class="scope-pill speed-pill" data-speed="accelerated">
+                  <div class="scope-pill-title">Accelerated</div>
+                  <div class="scope-pill-desc">Fast-track sprint</div>
+                </div>
+                <div class="scope-pill speed-pill" data-speed="express">
+                  <div class="scope-pill-title">Dedicated Rush</div>
+                  <div class="scope-pill-desc">100% focused priority</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Dynamic Summary Box -->
+          <div class="estimator-summary-panel">
+            <div>
+              <div class="summary-badge">Live Scope Calculation</div>
+
+              <div class="price-estimate-box">
+                <div class="price-estimate-label">Estimated Investment Range</div>
+                <div class="price-estimate-value" id="calc-price-display">$3,600 - $4,300</div>
+              </div>
+
+              <div class="timeline-estimate-row">
+                <span style="color: var(--text-secondary);">Target Delivery Window:</span>
+                <strong id="calc-timeline-display" style="color: var(--accent-cyan); font-family: var(--font-mono);">3 -
+                  4 Weeks</strong>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <div style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 6px;">Recommended Architectural
+                  Stack:</div>
+                <div id="calc-stack-display"
+                  style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">
+                  Next.js 15, TypeScript, Tailwind, Node.js, PostgreSQL</div>
+              </div>
+
+              <div style="margin-bottom: 12px; font-size: 0.88rem; font-weight: 700; color: var(--text-highlight);">
+                Included in this Scope:</div>
+              <ul class="deliverables-list" id="calc-deliverables-list">
+                <!-- Javascript fills this -->
+              </ul>
+            </div>
+
+            <button class="btn btn-primary btn-lg" id="lock-scope-btn" style="width: 100%;">
+              <span>Lock In Scope & Inquire</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. CORE SERVICES & VALUE PILLARS
+       ======================================================================== -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span>Specialized Services</span>
+        </div>
+        <h2 class="section-title">
+          Engineered for <span class="gradient-text">Impact & High Conversion</span>.
+        </h2>
+        <p class="section-subtitle">
+          I don't just write code; I solve critical digital bottlenecks with full-stack craftsmanship tailored to your
+          exact business objectives.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-title">Custom Full-Stack Web Apps</h3>
+          <p class="service-desc">
+            End-to-end web applications built with Next.js, React, Node.js, and relational databases. Architected for
+            speed, clean code maintenance, and effortless vertical scaling.
+          </p>
+          <ul class="service-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Next.js App Router & Server Components</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Robust REST & GraphQL API Design</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Relational DBs (PostgreSQL, Supabase)</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+              <path d="M2 2l7.586 7.586"></path>
+              <circle cx="11" cy="11" r="2"></circle>
+            </svg>
+          </div>
+          <h3 class="service-title">UI/UX & High-Converting Landing Pages</h3>
+          <p class="service-desc">
+            Translating complex value propositions into breathtaking interfaces that hook prospective clients in under 3
+            seconds, pairing smooth micro-animations with strong conversion psychology.
+          </p>
+          <ul class="service-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Custom Glassmorphic & Modern Styling</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Fluid Micro-Interactions & Scroll Triggers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Flawless Responsive Mobile Optimization</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">E-Commerce & Subscription Systems</h3>
+          <p class="service-desc">
+            As demonstrated in Tiffinix, I develop custom meal subscription engines, multi-tier recurring checkouts,
+            dynamic calendar meal customizers, and automated billing pipelines.
+          </p>
+          <ul class="service-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Stripe Billing & Webhook Resiliency</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Frictionless 1-Click Checkout Flows</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Real-Time Inventory & Order Tracking</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="service-title">Core Web Vitals & Speed Optimization</h3>
+          <p class="service-desc">
+            A 1-second delay in mobile load times can slash conversions by 20%. I systematically audit and refactor web
+            assets to attain green 95+ Google Lighthouse scores.
+          </p>
+          <ul class="service-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Sub-700ms First Contentful Paint</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Semantic SEO & OpenGraph Optimization</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> CDN Edge Caching & Chunk Splitting</li>
+          </ul>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">Interactive 3D & PropTech Solutions</h3>
+          <p class="service-desc">
+            As showcased in KR-ESTATE, I build WebGL and Three.js panoramic virtual tour viewers, dynamic Mapbox
+            mapping, and mortgage calculators that blow clients away.
+          </p>
+          <ul class="service-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Three.js / WebGL Virtual 360° Viewers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Interactive Mapbox Vector Layers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Lead Routing & VIP Inquiries</li>
+          </ul>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">SaaS Observability & Real-Time Dashboards</h3>
+          <p class="service-desc">
+            Building data-intensive platforms like PulseAI that ingest thousands of events per second with WebSockets,
+            D3 canvas rendering, and zero UI stutter.
+          </p>
+          <ul class="service-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Live WebSockets & Telemetry Feeds</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> D3.js & High-Frequency Canvas Charts</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Role-Based Access & Audit Logging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. HOW WE WORK (4-STEP COLLABORATIVE PROCESS)
+       ======================================================================== -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          <span>The Delivery Blueprint</span>
+        </div>
+        <h2 class="section-title">
+          From First Discovery To <span class="gradient-text">Flawless Production</span>.
+        </h2>
+        <p class="section-subtitle">
+          Transparent, agile, and communicative. Here is the exact roadmap we follow to launch your digital product on
+          time and within scope.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-card">
+          <div class="process-step-num">01</div>
+          <h3 class="process-title">Discovery & Strategy</h3>
+          <p class="process-text">
+            We unpack your commercial objectives, technical requirements, target personas, and competitive landscape.
+            You receive an architectural blueprint and scope breakdown.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card">
+          <div class="process-step-num">02</div>
+          <h3 class="process-title">Architecture & UI/UX</h3>
+          <p class="process-text">
+            We craft high-fidelity interactive wireframes, establish the design system, and structure database schemas
+            to ensure seamless performance before code is committed.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card">
+          <div class="process-step-num">03</div>
+          <h3 class="process-title">High-Velocity Sprints</h3>
+          <p class="process-text">
+            Active full-stack engineering with clean, modular code. You get weekly staging deployment links to test
+            features in real-time with continuous progress visibility.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-card">
+          <div class="process-step-num">04</div>
+          <h3 class="process-title">QA & Production Launch</h3>
+          <p class="process-text">
+            Rigorous cross-browser QA, Core Web Vitals audit, and secure production deployment on your preferred cloud.
+            Includes 30 days of comprehensive post-launch warranty.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. ABOUT THE CRAFTSMAN
+       ======================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="estimator-card" style="padding: 44px;">
+        <div class="about-grid">
+          <!-- Avatar Picture -->
+          <div
+            style="position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.5); border: 2px solid var(--border-medium);">
+            <img src="assets/images/avatar.png" alt="Avinash - Full-Stack Engineer"
+              style="width: 100%; height: auto; display: block; object-fit: cover;">
+            <div
+              style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(8, 10, 15, 0.85); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.8rem; font-weight: 700; color: #fff;">Avinash 👨‍💻</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-emerald);">● Online &
+                Coding</span>
+            </div>
+          </div>
+
+          <!-- Bio Content -->
+          <div>
+            <div class="section-tag" style="margin-bottom: 12px;">About The Craftsman</div>
+            <h2 style="font-size: 2.2rem; margin-bottom: 16px;">
+              Passionate About <span class="gradient-text">Pixel-Perfection</span> & Clean Systems.
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: 18px;">
+              With over 5 years of engineering experience spanning venture-backed startups and high-impact digital
+              ventures, I bridge the gap between design aesthetic brilliance and resilient full-stack architecture.
+            </p>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.75; margin-bottom: 24px;">
+              Whether architecting recurring meal delivery pipelines for <strong>Tiffinix</strong>, building
+              ultra-luxury 3D portals for <strong>KR-ESTATE</strong>, or designing SaaS observability tools, I focus on
+              what truly matters to you: <strong>shipping fast, writing maintainable code, and driving measurable client
+                revenue</strong>.
+            </p>
+
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="#contact" class="btn btn-primary">
+                <span>Start a Project Together</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <button class="btn btn-secondary copy-email-btn" data-email="avinashmehra5292@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy Direct Email</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. VERIFIED CLIENT REVIEWS & TESTIMONIALS (COMMENTED OUT)
+       ======================================================================== 
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+            </path>
+          </svg>
+          <span>Social Proof</span>
+        </div>
+        <h2 class="section-title">
+          What <span class="gradient-text">Founders & Partners</span> Say.
+        </h2>
+        <p class="section-subtitle">
+          Don't just take my word for it. Here is feedback from the leaders and founders I've built flagship platforms
+          for.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        [Review 1: Tiffinix]
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "Working on Tiffinix with this developer was a game changer for our business. The interactive weekly meal
+              planner and automated Stripe checkout doubled our recurring subscribers in under 60 days. Truly
+              exceptional craftsmanship!"
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="client-icon-badge"
+              style="background: rgba(249, 115, 22, 0.2); color: #f97316; width: 44px; height: 44px; font-size: 1.2rem;">
+              🍲</div>
+            <div class="author-info">
+              <h4>Rahul Sharma</h4>
+              <p>Founder & CEO, Tiffinix</p>
+            </div>
+          </div>
+        </div>
+
+        [Review 2: KR-ESTATE]
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "KR-ESTATE needed a luxury feel that stood out from standard agency templates. The 360° virtual tours and
+              snappy property search exceeded our wildest expectations. Our high-net-worth clients frequently commend
+              our portal."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="client-icon-badge"
+              style="background: rgba(234, 179, 8, 0.2); color: #eab308; width: 44px; height: 44px; font-size: 1.2rem;">
+              🏛️</div>
+            <div class="author-info">
+              <h4>Vikram Malhotra</h4>
+              <p>Managing Director, KR-ESTATE</p>
+            </div>
+          </div>
+        </div>
+
+        [Review 3: PulseAI]
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "Blistering engineering velocity and deep technical mastery. Delivered our complex telemetry dashboard 2
+              weeks ahead of schedule with zero regression bugs and 60 FPS charts. A dream partner for any tech
+              startup."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="client-icon-badge"
+              style="background: rgba(168, 85, 247, 0.2); color: #a855f7; width: 44px; height: 44px; font-size: 1.2rem;">
+              ⚡</div>
+            <div class="author-info">
+              <h4>Elena Rostova</h4>
+              <p>Head of Product, PulseAI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ========================================================================
+       10. CLIENT FAQ ACCORDION
+       ======================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span>Frequently Asked Questions</span>
+        </div>
+        <h2 class="section-title">
+          Everything You Need <span class="gradient-text">To Know</span>.
+        </h2>
+      </div>
+
+      <div class="faq-wrap">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>What is your typical project turnaround time?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            High-converting landing pages typically take 1 to 2 weeks. Comprehensive full-stack platforms and custom
+            applications like Tiffinix and KR-ESTATE average between 3 to 6 weeks, depending on custom integrations and
+            complexity.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How are project payments and milestone billing handled?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            For standard fixed-scope contracts, we operate on a structured milestone basis (e.g. 50% deposit to initiate
+            architecture & design, 25% upon feature-complete staging demo, 25% upon final QA & production release).
+            Escrow and custom milestone agreements are also welcome.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you work with our existing codebase or Figma designs?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Yes! If you already have Figma designs, I will convert them into pixel-perfect, accessible, and responsive
+            code. If you have an existing codebase, I perform a rapid audit and seamlessly integrate into your Git
+            workflows and pull-request pipelines.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you offer post-launch maintenance and ongoing support?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Every project includes 30 days of complimentary bug-fixing and deployment warranty. For ongoing feature
+            sprints, cloud monitoring, and security updates, I offer monthly retainer partnerships.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       11. HIGH-CONVERSION CONTACT & HIRE ME SECTION
+       ======================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span>Kickoff A Project</span>
+        </div>
+        <h2 class="section-title">
+          Let’s Build Something <span class="gradient-text">Exceptional Together</span>.
+        </h2>
+        <p class="section-subtitle">
+          Have an exciting project or idea? Fill in the details below or reach out directly. I respond to all serious
+          client inquiries within 24 hours.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Direct Channels & Status -->
+        <div class="contact-info-panel">
+          <div class="glass-panel" style="padding: 32px;">
+            <div class="status-pill" style="margin-bottom: 20px;">
+              <span class="status-dot"></span>
+              <span>Available for New Projects</span>
+            </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Fast-Track Direct Inquiries</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 26px;">
+              Skip the queue or reach out for confidential NDAs, technical advisory, or urgent sprint availability.
+            </p>
+
+            <div class="contact-channels">
+              <!-- Channel 1: Email -->
+              <a href="mailto:avinashmehra5292@gmail.com" class="contact-card-link copy-email-btn"
+                data-email="avinashmehra5292@gmail.com">
+                <div class="contact-channel-left">
+                  <div class="contact-channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="contact-channel-details">
+                    <h5>Email Inquiries</h5>
+                    <p>avinashmehra5292@gmail.com (Click to copy)</p>
+                  </div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <!-- Channel 2: WhatsApp & Direct Call -->
+              <a href="https://wa.me/917870433580" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                <div class="contact-channel-left">
+                  <div class="contact-channel-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="contact-channel-details">
+                    <h5>WhatsApp & Direct Call</h5>
+                    <p>+91 7870433580 (Click to chat)</p>
+                  </div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <!-- Channel 3: GitHub -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                <div class="contact-channel-left">
+                  <div class="contact-channel-icon" style="background: rgba(255, 255, 255, 0.08); color: #fff;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="contact-channel-details">
+                    <h5>GitHub Repository</h5>
+                    <p>Open Source & Code Architecture</p>
+                  </div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div class="contact-form-panel">
+          <form id="main-contact-form">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. sarah@startup.com" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="contact-project-type" class="form-label">Project Type</label>
+                <select id="contact-project-type" class="form-select">
+                  <option value="Full-Stack Web App">Full-Stack Web App</option>
+                  <option value="E-Commerce / FoodTech">E-Commerce / FoodTech (Like Tiffinix)</option>
+                  <option value="PropTech & Real Estate">PropTech & Real Estate (Like KR-ESTATE)</option>
+                  <option value="SaaS / MVP Development">SaaS / MVP Development</option>
+                  <option value="Landing Page">High-Converting Landing Page</option>
+                  <option value="Code Audit & Speed Optimization">Code Audit & Speed Optimization</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-budget" class="form-label">Estimated Budget</label>
+                <select id="contact-budget" class="form-select">
+                  <option value="$1,500 - $3,000">$1,500 - $3,000</option>
+                  <option value="$3,000 - $5,000" selected>$3,000 - $5,000</option>
+                  <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                  <option value="$10,000+">$10,000+ (Enterprise Scope)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Project Overview & Goals *</label>
+              <textarea id="contact-message" rows="5" class="form-textarea"
+                placeholder="Describe your vision, target timeline, key feature wishlist, or scope from the calculator..."
+                required></textarea>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-lg" style="width: 100%;">
+              <span>Submit Project Inquiry</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+            <div style="text-align: center; margin-top: 12px; font-size: 0.78rem; color: var(--text-muted);">
+              🔒 100% confidential. Non-Disclosure Agreement (NDA) available upon request.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       12. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <span class="brand-icon">A</span>
+            <span>Avinash<span class="brand-dot">.dev</span> 💻</span>
+          </a>
+          <p>
+            Architecting high-converting digital products, resilient full-stack applications, and memorable user
+            experiences for ambitious founders worldwide.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="#projects">Selected Projects</a></li>
+            <li><a href="#services">Specialized Services</a></li>
+            <li><a href="#estimator">Scope & Cost Estimator</a></li>
+            <li><a href="#process">Development Roadmap</a></li>
+            <li><a href="#contact">Book Discovery Call</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Flagship Showcases</h5>
+          <ul class="footer-links">
+            <li><a href="#projects" class="open-case-study" data-id="tiffinix">Tiffinix FoodTech App</a></li>
+            <li><a href="#projects" class="open-case-study" data-id="krestates">KR-ESTATE Luxury Portal</a></li>
+            <li><a href="#projects" class="open-case-study" data-id="Shri Ratna Jewellers">Shri Ratna Jewellers</a></li>
+            <li><a href="#projects" class="open-case-study" data-id="Jai Mata Di Travels">Jai Mata Di Travels</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Avinash. Built with precision, performance & vanilla web standards.
+        </div>
+        <div class="live-clock-badge">
+          <span class="clock-dot"></span>
+          <span id="live-time-display">--:--:-- (UTC+5:30)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Anchor -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

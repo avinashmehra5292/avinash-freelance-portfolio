@@ -1,0 +1,17 @@
+{
+  "name": "avinash-portfolio",
+  "version": "1.0.0",
+  "description": "Avinash.dev — Freelance Web Developer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 4173",
+    "start": "python -m http.server 4173",
+    "serve": "npx serve -l 4173"
+  },
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "freelance"
+  ],
+  "author": "Avinash"
+}
