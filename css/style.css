@@ -125,7 +125,7 @@ html {
   scroll-padding-top: 80px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -134,11 +134,16 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.65;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   transition: background-color var(--transition-smooth), color var(--transition-smooth);
   position: relative;
   -webkit-tap-highlight-color: transparent;
+}
+
+body.menu-locked {
+  overflow: hidden !important;
+  touch-action: none;
 }
 
 img, picture, video, canvas {

@@ -50,14 +50,24 @@
           <span>Avinash<span class="brand-dot">.dev</span> 💻</span>
         </a>
 
-        <!-- Desktop Navigation Links -->
+        <!-- Desktop & Mobile Navigation Links -->
         <ul class="nav-links" id="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#process" class="nav-link">Process</a></li>
-          <!-- <li><a href="#reviews" class="nav-link">Reviews</a></li> -->
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#about" class="nav-link"><span>About</span></a></li>
+          <li><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+          <li><a href="#services" class="nav-link"><span>Services</span></a></li>
+          <li><a href="#process" class="nav-link"><span>Process</span></a></li>
+          <li><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+          <li class="mobile-nav-cta-item">
+            <a href="mailto:avinashmehra5292@gmail.com?subject=Project%20Inquiry%20%7C%20Hire%20Avinash&body=Hi%20Avinash,%0D%0A%0D%0AI'm%20reaching%20out%20to%20discuss%20a%20new%20project:%0D%0A%0D%0A-%20Project%20Type:%20%0D%0A-%20Estimated%20Budget:%20%0D%0A-%20Target%20Timeline:%20%0D%0A-%20Project%20Overview:%20"
+              class="btn btn-primary btn-sm mobile-drawer-btn">
+              <span>Hire Me Directly</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" width="16" height="16">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </li>
         </ul>
 
         <!-- Nav Actions & Mobile Toggle -->
@@ -95,13 +105,19 @@
             </svg>
           </a>
 
-          <!-- Mobile Hamburger -->
-          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu"
+            aria-expanded="false">
+            <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
               <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
         </div>
@@ -806,30 +822,42 @@
             </p>
 
             <div class="contact-channels">
-              <!-- Channel 1: Email -->
-              <a href="mailto:avinashmehra5292@gmail.com" class="contact-card-link copy-email-btn"
-                data-email="avinashmehra5292@gmail.com">
+              <!-- Channel 1: Email (1-Click Copy & Direct Mailto) -->
+              <a href="mailto:avinashmehra5292@gmail.com?subject=Project%20Inquiry%20%7C%20Hire%20Avinash"
+                class="contact-card-link copy-email-btn" data-email="avinashmehra5292@gmail.com"
+                title="Click to copy email address">
                 <div class="contact-channel-left">
-                  <div class="contact-channel-icon">
+                  <div class="contact-channel-icon email-channel-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                       <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
                   </div>
                   <div class="contact-channel-details">
-                    <h5>Email Inquiries</h5>
-                    <p>avinashmehra5292@gmail.com (Click to copy)</p>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <h5>Email Inquiries</h5>
+                      <span class="copy-badge" id="email-copy-badge">Click to copy</span>
+                    </div>
+                    <p>avinashmehra5292@gmail.com</p>
                   </div>
                 </div>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+                <div class="channel-action-box">
+                  <svg class="channel-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <svg class="channel-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981"
+                    stroke-width="2.5" style="display: none;">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
               </a>
 
-              <!-- Channel 2: WhatsApp & Direct Call -->
-              <a href="https://wa.me/917870433580" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+              <!-- Channel 2: WhatsApp with Pre-filled Client Template -->
+              <a href="https://wa.me/917870433580?text=Hi%20Avinash,%20I'm%20reaching%20out%20from%20your%20portfolio%20to%20discuss%20a%20new%20project!"
+                target="_blank" rel="noopener noreferrer" class="contact-card-link whatsapp-card-link">
                 <div class="contact-channel-left">
-                  <div class="contact-channel-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                  <div class="contact-channel-icon" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path
                         d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
@@ -837,13 +865,18 @@
                     </svg>
                   </div>
                   <div class="contact-channel-details">
-                    <h5>WhatsApp & Direct Call</h5>
-                    <p>+91 7870433580 (Click to chat)</p>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <h5>WhatsApp & Direct Call</h5>
+                      <span class="online-indicator"><span class="pulse-dot"></span> Online</span>
+                    </div>
+                    <p>+91 7870433580 (Click to start chat)</p>
                   </div>
                 </div>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+                <div class="channel-action-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
               </a>
 
               <!-- Channel 3: GitHub -->
@@ -862,15 +895,17 @@
                     <p>Open Source & Code Architecture</p>
                   </div>
                 </div>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+                <div class="channel-action-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Right: Inquiry Form -->
+        <!-- Right: Inquiry Form & Live Success State -->
         <div class="contact-form-panel">
           <form id="main-contact-form" action="https://formsubmit.co/avinashmehra5292@gmail.com" method="POST">
             <!-- FormSubmit Anti-Spam & Configuration -->
@@ -904,12 +939,24 @@
                   <option value="Landing Page">High-Converting Landing Page</option>
                   <option value="Code Audit & Speed Optimization">Code Audit & Speed Optimization</option>
                 </select>
+                <div class="preset-chips-row" id="project-type-chips">
+                  <button type="button" class="preset-chip" data-value="Full-Stack Web App">Web App</button>
+                  <button type="button" class="preset-chip" data-value="E-Commerce / FoodTech">E-Commerce</button>
+                  <button type="button" class="preset-chip" data-value="PropTech & Real Estate">PropTech</button>
+                  <button type="button" class="preset-chip" data-value="Landing Page">Landing Page</button>
+                </div>
               </div>
 
               <div class="form-group">
                 <label for="contact-budget" class="form-label">Estimated Budget</label>
                 <input type="text" id="contact-budget" name="Estimated Budget" class="form-input"
-                  placeholder="Enter your estimated budget">
+                  placeholder="Select or enter your budget">
+                <div class="preset-chips-row" id="budget-chips">
+                  <button type="button" class="preset-chip" data-budget="<$2,000">&lt; $2k</button>
+                  <button type="button" class="preset-chip" data-budget="$2,000 - $5,000">$2k - $5k</button>
+                  <button type="button" class="preset-chip" data-budget="$5,000 - $10,000">$5k - $10k</button>
+                  <button type="button" class="preset-chip" data-budget="$10,000+ (Enterprise)">$10k+</button>
+                </div>
               </div>
             </div>
 
@@ -931,6 +978,51 @@
               🔒 100% confidential. Non-Disclosure Agreement (NDA) available upon request.
             </div>
           </form>
+
+          <!-- In-Page Submission Success State -->
+          <div id="contact-success-state" class="contact-success-state">
+            <div class="success-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="success-headline">Project Brief Delivered! 🎉</h3>
+            <p class="success-desc">
+              Thank you, <strong id="success-client-name">there</strong>! Your inquiry has been sent directly to
+              Avinash's inbox. You will receive a technical review and response within 24 hours.
+            </p>
+            <div class="success-ref-pill" id="success-ref-id">Ref #AV-948201</div>
+            <div class="success-meta-box">
+              <div class="success-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Direct delivery to: <strong>avinashmehra5292@gmail.com</strong></span>
+              </div>
+              <div class="success-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Average Response Time: <strong>&lt; 12 Hours</strong></span>
+              </div>
+              <div class="success-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                  </path>
+                </svg>
+                <span>Need faster discussion? <a
+                    href="https://wa.me/917870433580?text=Hi%20Avinash,%20I%20just%20submitted%20a%20project%20inquiry%20via%20your%20portfolio!"
+                    target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan); font-weight:700;">Ping on
+                    WhatsApp</a></span>
+              </div>
+            </div>
+            <button type="button" id="reset-contact-form-btn" class="btn btn-secondary btn-sm" style="margin: 0 auto;">
+              <span>Send Another Message</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

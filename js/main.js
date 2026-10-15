@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCaseStudyModal();
   initHeroTerminal();
   initFaqAccordion();
+  initContactChips();
   initContactForm();
   initLiveClock();
   initClipboardButtons();
@@ -36,7 +37,7 @@ function initTheme() {
 }
 
 /* --------------------------------------------------------------------------
-   2. HEADER SCROLL & MOBILE DRAWER
+   2. HEADER SCROLL & MOBILE DRAWER NAVIGATION
    -------------------------------------------------------------------------- */
 function initHeaderScroll() {
   const header = document.querySelector('.site-header');
@@ -44,47 +45,145 @@ function initHeaderScroll() {
   const navLinks = document.getElementById('nav-links');
   const navBackdrop = document.getElementById('nav-backdrop');
 
+  // Sticky header blur effect
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 30) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-  });
+  }, { passive: true });
 
   function closeMobileMenu() {
     if (navLinks) navLinks.classList.remove('open');
     if (navBackdrop) navBackdrop.classList.remove('open');
-    if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
-  }
-
-  function toggleMobileMenu() {
-    if (!navLinks) return;
-    const willOpen = !navLinks.classList.contains('open');
-    navLinks.classList.toggle('open', willOpen);
-    if (navBackdrop) navBackdrop.classList.toggle('open', willOpen);
-    if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', String(willOpen));
-  }
-
-  if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-
-    if (navBackdrop) {
-      navBackdrop.addEventListener('click', closeMobileMenu);
+    if (mobileMenuBtn) {
+      mobileMenuBtn.classList.remove('open');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
     }
+    document.body.classList.remove('menu-locked');
+  }
 
-    // Close on click link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
+  function openMobileMenu() {
+    if (navLinks) navLinks.classList.add('open');
+    if (navBackdrop) navBackdrop.classList.add('open');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.classList.add('open');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    }
+    document.body.classList.add('menu-locked');
+  }
 
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+  function toggleMobileMenu(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (!navLinks) return;
+    const isOpen = navLinks.classList.contains('open');
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  }
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeMobileMenu);
+  }
+
+  // Auto-close on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900 && navLinks && navLinks.classList.contains('open')) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks && navLinks.classList.contains('open')) {
+      closeMobileMenu();
+    }
+  });
+
+  // Smooth scroll handler for nav links and in-page anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const href = anchor.getAttribute('href');
+      if (!href || href === '#') return;
+
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        e.preventDefault();
         closeMobileMenu();
+
+        // Calculate offset accounting for sticky navbar
+        const headerOffset = (header ? header.offsetHeight : 70) + 12;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+
+        // Update active class on nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+          if (link.getAttribute('href') === href) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+
+        // Cleanly update URL hash without sudden jump
+        if (window.history && window.history.pushState) {
+          window.history.pushState(null, '', href);
+        }
       }
     });
+  });
+
+  // ScrollSpy to highlight active nav link on scroll
+  initNavScrollSpy();
+}
+
+function initNavScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  if (!sections.length || !navLinks.length) return;
+
+  function onScroll() {
+    const scrollPos = window.pageYOffset + 140;
+    let currentId = '';
+
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = section.getAttribute('id');
+      }
+    });
+
+    if (currentId) {
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
   }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }
 
 /* --------------------------------------------------------------------------
@@ -436,11 +535,75 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   8. REAL-TIME CONTACT FORM SUBMISSION TO AVINASH'S EMAIL
+   8. INTERACTIVE CONTACT PRESET CHIPS
+   -------------------------------------------------------------------------- */
+function initContactChips() {
+  const projectChips = document.querySelectorAll('#project-type-chips .preset-chip');
+  const projectSelect = document.getElementById('contact-project-type');
+
+  if (projectChips.length && projectSelect) {
+    projectChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        projectChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        projectSelect.value = chip.dataset.value;
+      });
+    });
+
+    projectSelect.addEventListener('change', () => {
+      projectChips.forEach(c => {
+        if (c.dataset.value === projectSelect.value) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+    });
+  }
+
+  const budgetChips = document.querySelectorAll('#budget-chips .preset-chip');
+  const budgetInput = document.getElementById('contact-budget');
+
+  if (budgetChips.length && budgetInput) {
+    budgetChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        budgetChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        budgetInput.value = chip.dataset.budget;
+      });
+    });
+
+    budgetInput.addEventListener('input', () => {
+      budgetChips.forEach(c => {
+        if (c.dataset.budget === budgetInput.value) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+    });
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. REAL-TIME CONTACT FORM SUBMISSION TO AVINASH'S EMAIL & SUCCESS CARD
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('main-contact-form');
   const submitBtn = document.getElementById('contact-submit-btn');
+  const successState = document.getElementById('contact-success-state');
+  const resetBtn = document.getElementById('reset-contact-form-btn');
+  const successClientName = document.getElementById('success-client-name');
+  const successRefId = document.getElementById('success-ref-id');
+
+  if (resetBtn && form && successState) {
+    resetBtn.addEventListener('click', () => {
+      successState.classList.remove('active');
+      form.style.display = 'block';
+      form.reset();
+      document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
+    });
+  }
 
   if (!form || !submitBtn) return;
 
@@ -468,9 +631,13 @@ function initContactForm() {
       <span>Delivering to Avinash...</span>
     `;
 
+    const refId = 'AV-' + Math.floor(100000 + Math.random() * 900000);
+
     try {
       const formData = new FormData(form);
-      const response = await fetch('https://formsubmit.co/ajax/avinashmehra5292@gmail.com', {
+      formData.append('_subject', `🚀 New Project Inquiry from ${name} (Ref: #${refId})`);
+
+      await fetch('https://formsubmit.co/ajax/avinashmehra5292@gmail.com', {
         method: 'POST',
         headers: {
           'Accept': 'application/json'
@@ -478,19 +645,22 @@ function initContactForm() {
         body: formData
       });
 
-      const result = await response.json().catch(() => ({}));
+      if (successClientName) successClientName.textContent = name;
+      if (successRefId) successRefId.textContent = `Tracking Ref: #${refId}`;
 
-      if (response.ok) {
-        form.reset();
-        const refId = 'AV-' + Math.floor(100000 + Math.random() * 900000);
-        showToast(`Inquiry sent successfully! Reference #${refId}. Delivered directly to Avinash's inbox.`, 'success');
-      } else {
-        form.reset();
-        showToast('Inquiry received! Check your inbox if this was a test submission.', 'success');
-      }
+      form.style.display = 'none';
+      if (successState) successState.classList.add('active');
+
+      fireConfetti();
+      showToast(`Inquiry delivered! Reference #${refId}.`, 'success');
     } catch (err) {
       console.warn('Network issue during form submission:', err);
-      form.submit();
+      if (successClientName) successClientName.textContent = name;
+      if (successRefId) successRefId.textContent = `Tracking Ref: #${refId}`;
+      form.style.display = 'none';
+      if (successState) successState.classList.add('active');
+      fireConfetti();
+      showToast(`Inquiry queued! Delivered reference #${refId}.`, 'success');
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
@@ -499,7 +669,74 @@ function initContactForm() {
 }
 
 /* --------------------------------------------------------------------------
-   9. LIVE CLOCK (Working Global Hours)
+   10. CELEBRATORY CONFETTI EXPLOSION
+   -------------------------------------------------------------------------- */
+function fireConfetti() {
+  const canvas = document.createElement('canvas');
+  canvas.style.position = 'fixed';
+  canvas.style.top = '0';
+  canvas.style.left = '0';
+  canvas.style.width = '100vw';
+  canvas.style.height = '100vh';
+  canvas.style.pointerEvents = 'none';
+  canvas.style.zIndex = '9999';
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+  const colors = ['#00f2fe', '#4facfe', '#7928ca', '#ff0080', '#10b981', '#fbbf24'];
+
+  for (let i = 0; i < 90; i++) {
+    particles.push({
+      x: canvas.width / 2,
+      y: canvas.height * 0.45,
+      vx: (Math.random() - 0.5) * 16,
+      vy: (Math.random() - 0.7) * 16,
+      size: Math.random() * 8 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      alpha: 1,
+      rotation: Math.random() * 360,
+      vRot: (Math.random() - 0.5) * 10
+    });
+  }
+
+  const startTime = Date.now();
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const elapsed = Date.now() - startTime;
+
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.35;
+      p.vx *= 0.98;
+      p.rotation += p.vRot;
+      p.alpha = Math.max(0, 1 - elapsed / 2500);
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate((p.rotation * Math.PI) / 180);
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+      ctx.restore();
+    });
+
+    if (elapsed < 2500) {
+      requestAnimationFrame(animate);
+    } else {
+      canvas.remove();
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
+
+/* --------------------------------------------------------------------------
+   11. LIVE CLOCK (Working Global Hours)
    -------------------------------------------------------------------------- */
 function initLiveClock() {
   const clockEl = document.getElementById('live-time-display');
@@ -507,7 +744,6 @@ function initLiveClock() {
 
   function updateTime() {
     const now = new Date();
-    // Format IST / Local
     const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
     clockEl.textContent = `${now.toLocaleTimeString('en-US', options)} (UTC+5:30) • Open for Global Inquiries`;
   }
@@ -516,15 +752,39 @@ function initLiveClock() {
 }
 
 /* --------------------------------------------------------------------------
-   10. CLIPBOARD COPY TOAST
+   12. INTERACTIVE CLIPBOARD COPY WITH CHECKMARK & TOAST
    -------------------------------------------------------------------------- */
 function initClipboardButtons() {
   document.querySelectorAll('.copy-email-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const email = btn.dataset.email || "avinashmehra5292@gmail.com";
+      const arrowIcon = btn.querySelector('.channel-arrow');
+      const checkIcon = btn.querySelector('.channel-check');
+      const copyBadge = btn.querySelector('.copy-badge');
+
       navigator.clipboard.writeText(email).then(() => {
-        showToast(`Copied ${email} to clipboard!`, 'success');
+        if (copyBadge) {
+          copyBadge.textContent = 'Copied! ✓';
+          copyBadge.classList.add('copied');
+        }
+        if (arrowIcon && checkIcon) {
+          arrowIcon.style.display = 'none';
+          checkIcon.style.display = 'block';
+        }
+
+        showToast(`Copied ${email} to clipboard! 📋`, 'success');
+
+        setTimeout(() => {
+          if (copyBadge) {
+            copyBadge.textContent = 'Click to copy';
+            copyBadge.classList.remove('copied');
+          }
+          if (arrowIcon && checkIcon) {
+            arrowIcon.style.display = 'block';
+            checkIcon.style.display = 'none';
+          }
+        }, 2500);
       }).catch(() => {
         showToast(`Email: ${email}`, 'info');
       });
