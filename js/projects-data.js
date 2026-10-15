@@ -1,6 +1,6 @@
 /**
  * DEVCRAFT - FEATURED PROJECTS REPOSITORY
- * Contains detailed metadata, metrics, live URLs, and case study content for client presentation.
+ * Contains detailed metadata, live URLs, and case study content for client presentation.
  */
 
 const PROJECTS_DATA = [
@@ -14,11 +14,6 @@ const PROJECTS_DATA = [
     image: "assets/images/Tiffinix.png",
     liveUrl: "https://thetiffinix.html-5.me", // <-- PUT YOUR LIVE PROJECT LINK HERE
     summary: "A high-conversion food subscription and daily tiffin delivery management platform. Built to automate recurring meal scheduling, kitchen dispatch telemetry, real-time checkout, and customer nutrition tracking.",
-    metrics: [
-      { label: "Subscription Growth", value: "+185%" },
-      { label: "Daily Meals Dispatched", value: "3,200+" },
-      { label: "Lighthouse Performance", value: "98/100" }
-    ],
     tech: ["Next.js 15", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Redis", "Stripe Subscriptions", "WebSockets"],
     caseStudy: {
       client: "Tiffinix Foods Inc.",
@@ -32,12 +27,7 @@ const PROJECTS_DATA = [
         "Automated Stripe subscription pipeline supporting flexible skip, pause, and tier upgrades with zero human intervention.",
         "Redis-cached kitchen queue dispatch system reducing ticket generation latency from 4.2s to 110ms.",
         "Fully responsive mobile-first UI achieving a sub-700ms First Contentful Paint."
-      ],
-      testimonial: {
-        quote: "Working with this developer completely transformed our customer retention. The meal customizer and instant checkout alone doubled our Monthly Recurring Revenue within 60 days.",
-        author: "Anshuman Ankit",
-        role: "CEO, Tiffinix"
-      }
+      ]
     }
   },
   {
@@ -50,11 +40,6 @@ const PROJECTS_DATA = [
     image: "assets/images/krestates.png",
     liveUrl: "https://kr-estate-noida-2026-10-07-aad9f.onrender.com", // <-- PUT YOUR LIVE PROJECT LINK HERE
     summary: "A flagship ultra-luxury real estate portal featuring interactive 360° virtual tours, interactive map filtering, intelligent mortgage amortization calculators, and VIP broker lead-routing.",
-    metrics: [
-      { label: "Property Inquiries", value: "$42M+" },
-      { label: "Core Web Vitals", value: "0.7s LCP" },
-      { label: "Lead Capture Lift", value: "+220%" }
-    ],
     tech: ["React 19", "Three.js / WebGL", "Mapbox GL", "Express.js", "MongoDB", "AWS S3 / CloudFront", "Vanilla CSS"],
     caseStudy: {
       client: "KR Real Estate & Luxury Living Group",
@@ -68,12 +53,7 @@ const PROJECTS_DATA = [
         "Faceted property filtering engine with live polygon radius search and commute-time estimation.",
         "Interactive financial mortgage & amortization calculator with instant downloadable PDF property brochures.",
         "AVIF / WebP automated CDN asset compression slashing initial bundle weight by 73%."
-      ],
-      testimonial: {
-        quote: "The craftsmanship in this website is peerless. Our high-net-worth clientele regularly compliment the speed and ease of browsing our multi-million dollar estates.",
-        author: "Vikram M.",
-        role: "Managing Director, KR-ESTATE"
-      }
+      ]
     }
   },
   {
@@ -86,11 +66,6 @@ const PROJECTS_DATA = [
     image: "assets/images/Shri Ratna Jewellers.png",
     liveUrl: "https://sriratnajewellers.42web.io", // <-- PUT YOUR LIVE PROJECT LINK HERE
     summary: "An ultra-luxurious e-commerce destination for handcrafted gold, diamond, and bridal jewelry. Features live bullion gold-rate updates, interactive gemstone certification verification, high-resolution zoom, and bespoke WhatsApp jewelry concierge.",
-    metrics: [
-      { label: "Online Sales Growth", value: "+240%" },
-      { label: "Catalog Engagement", value: "4.8 min avg" },
-      { label: "Cart Abandonment Drop", value: "-35%" }
-    ],
     tech: ["Next.js 15", "TypeScript", "Node.js", "PostgreSQL", "Razorpay / Stripe", "Cloudinary HD Zoom", "Tailwind CSS"],
     caseStudy: {
       client: "Shri Ratna Jewellers",
@@ -104,12 +79,7 @@ const PROJECTS_DATA = [
         "Ultra-high-definition interactive zoom viewer showcasing intricate gemstone cuts and hallmark engravings at 60 FPS.",
         "Built-in Hallmark & IGI / GIA certificate verification tool allowing buyers to authenticate pieces instantly.",
         "Integrated multi-channel sales flow with insured delivery tracking and direct 1-on-1 video call appointment booking."
-      ],
-      testimonial: {
-        quote: "The website beautifully captures the luxury and heritage of our jewelry. Our high-ticket bridal and diamond inquiries have more than doubled since launching our digital flagship.",
-        author: "Rajesh Verma",
-        role: "Managing Director, Shri Ratna Jewellers"
-      }
+      ]
     }
   },
   {
@@ -122,11 +92,6 @@ const PROJECTS_DATA = [
     image: "assets/images/Jai Mata Di Travels.png",
     liveUrl: "https://jaimataditravels.freedev.app", // <-- PUT YOUR LIVE PROJECT LINK HERE
     summary: "A comprehensive travel booking and pilgrimage tour platform offering customizable holiday packages, car rental fleet bookings, seasonal pilgrimage itineraries, instant WhatsApp quotation routing, and automated invoicing.",
-    metrics: [
-      { label: "Monthly Tour Bookings", value: "850+" },
-      { label: "Inquiry Response Time", value: "<30 sec" },
-      { label: "Customer Rating", value: "4.9 / 5.0" }
-    ],
     tech: ["React", "Next.js", "Express.js", "MongoDB", "WhatsApp Business API", "Razorpay", "Leaflet Maps"],
     caseStudy: {
       client: "Jai Mata Di Travels & Tourism",
@@ -140,12 +105,7 @@ const PROJECTS_DATA = [
         "One-tap WhatsApp direct quote generator sending pre-filled trip requirements straight to travel coordinators in real time.",
         "Dynamic cab fleet booking module with transparent distance, vehicle type (Sedan/SUV/Tempo), and per-km pricing.",
         "Automated booking confirmation with GST invoice and voucher PDF generation."
-      ],
-      testimonial: {
-        quote: "Our online bookings grew exponentially within the first month. The instant WhatsApp quotation feature alone captures leads that we used to lose to competitors.",
-        author: "Sunil Sharma",
-        role: "Owner & Operations Head, Jai Mata Di Travels"
-      }
+      ]
     }
   }
 ];

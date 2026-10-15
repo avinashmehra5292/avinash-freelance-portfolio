@@ -87,6 +87,7 @@
     font-size: 1.05rem;
     gap: 7px;
   }
+
   .brand-icon {
     width: 30px;
     height: 30px;
@@ -148,10 +149,12 @@
   .nav-actions {
     gap: 6px;
   }
+
   .nav-cta-btn {
     padding: 6px 10px !important;
     font-size: 0.78rem !important;
   }
+
   .nav-cta-btn svg {
     display: none !important;
   }
@@ -189,6 +192,7 @@
     width: 34px;
     height: 34px;
   }
+
   .theme-toggle-btn svg {
     width: 16px;
     height: 16px;
@@ -259,6 +263,7 @@
     width: 34px;
     height: 34px;
   }
+
   .mobile-menu-btn svg {
     width: 18px;
     height: 18px;
@@ -404,9 +409,9 @@
    2. HERO SECTION
    -------------------------------------------------------------------------- */
 .hero-section {
-  padding-top: 170px;
-  padding-bottom: 90px;
-  min-height: 90vh;
+  padding-top: 98px;
+  padding-bottom: 32px;
+  min-height: auto;
   display: flex;
   align-items: center;
 }
@@ -414,28 +419,38 @@
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
+  gap: 40px;
   align-items: center;
 }
 
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 28px;
   }
 
   .hero-section {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 86px;
+    padding-bottom: 24px;
     min-height: auto;
   }
 }
 
 @media (max-width: 600px) {
   .hero-section {
-    padding-top: 96px;
-    padding-bottom: 40px;
+    padding-top: 78px;
+    padding-bottom: 20px;
   }
+}
+
+.about-section {
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.projects-section {
+  padding-top: 36px;
+  padding-bottom: 48px;
 }
 
 .hero-badge-wrap {
@@ -475,6 +490,7 @@
     font-size: 0.76rem;
     padding: 5px 10px;
   }
+
   .status-pill {
     font-size: 0.76rem !important;
     padding: 5px 10px !important;
@@ -513,6 +529,7 @@
     gap: 12px;
     margin-bottom: 32px;
   }
+
   .hero-cta-cluster .btn {
     width: 100%;
     justify-content: center;
@@ -819,7 +836,8 @@
   border: none;
   outline: none;
   font-family: var(--font-mono);
-  font-size: 16px; /* 16px avoids iOS zoom */
+  font-size: 16px;
+  /* 16px avoids iOS zoom */
   color: var(--accent-cyan);
   flex: 1;
   min-width: 120px;
@@ -851,7 +869,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 48px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 680px) {
@@ -865,6 +883,7 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+
   .project-filters::-webkit-scrollbar {
     display: none;
   }
@@ -1187,6 +1206,7 @@
     gap: 8px;
     width: 100%;
   }
+
   .project-actions .btn {
     flex: 1;
     justify-content: center;
@@ -1485,6 +1505,7 @@
     height: 46px;
     margin-bottom: 16px;
   }
+
   .service-icon-box svg {
     width: 24px;
     height: 24px;
@@ -1923,6 +1944,7 @@
     width: 36px;
     height: 36px;
   }
+
   .contact-channel-icon svg {
     width: 18px;
     height: 18px;
@@ -2008,12 +2030,14 @@
   padding: 14px 18px;
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 16px; /* 16px strictly avoids iOS Safari zoom */
+  font-size: 16px;
+  /* 16px strictly avoids iOS Safari zoom */
   outline: none;
   transition: all var(--transition-fast);
 }
 
 @media (max-width: 600px) {
+
   .form-input,
   .form-select,
   .form-textarea {
@@ -2106,8 +2130,17 @@
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.35; transform: scale(0.7); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.35;
+    transform: scale(0.7);
+  }
 }
 
 /* Preset Chips for Form */
@@ -2257,21 +2290,21 @@
 .site-footer {
   border-top: 1px solid var(--border-subtle);
   background: var(--bg-secondary);
-  padding: 70px 0 30px 0;
+  padding: 50px 0 50px 0;
   position: relative;
 }
 
 @media (max-width: 768px) {
   .site-footer {
-    padding: 48px 0 24px 0;
+    padding: 46px 0 24px 0;
   }
 }
 
 .footer-top {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 50px;
-  margin-bottom: 50px;
+  gap: 40px;
+  margin-bottom: 32px;
 }
 
 @media (max-width: 768px) {
@@ -2400,6 +2433,7 @@
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .about-card {
     padding: 28px 20px;
   }
@@ -2416,7 +2450,7 @@
   position: relative;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   border: 2px solid var(--border-medium);
 }
 
@@ -2514,6 +2548,7 @@
     gap: 10px;
     width: 100%;
   }
+
   .about-actions-row .btn {
     width: 100%;
     justify-content: center;

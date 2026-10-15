@@ -25,9 +25,13 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/3d-animations.css">
 </head>
 
 <body>
+
+  <!-- 3D WebGL Canvas Layer -->
+  <canvas id="webgl-3d-scene" aria-hidden="true"></canvas>
 
   <!-- Ambient Glow Background Orbs -->
   <div class="ambient-background" aria-hidden="true">
@@ -1083,8 +1087,10 @@
   <div class="toast-container" aria-live="polite"></div>
 
   <!-- Scripts -->
+  <script src="js/three.min.js"></script>
   <script src="js/projects-data.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/3d-experience.js"></script>
 </body>
 
 </html>

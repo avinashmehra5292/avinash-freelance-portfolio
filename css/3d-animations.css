@@ -1,0 +1,218 @@
+/* ==========================================================================
+   3D ANIMATIONS & WEBGL INTERACTION STYLES
+   Avinash Portfolio - Futuristic Full-Stack Architect Aesthetic
+   ========================================================================== */
+
+/* 1. Fullscreen WebGL Canvas Layer */
+#webgl-3d-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.95;
+  transition: opacity 0.6s ease;
+}
+
+[data-theme="light"] #webgl-3d-scene {
+  opacity: 0.75;
+}
+
+/* Ensure page content floats comfortably above the WebGL background */
+.site-header,
+section,
+footer,
+.modal-backdrop,
+.toast-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glassmorphism enhancements for 3D depth perception */
+.terminal-window,
+.project-card,
+.service-card,
+.about-card,
+.process-step-card,
+.faq-item {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* 2. Interactive 3D Card Tilt Engine */
+.has-3d-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Specular holographic glare overlay */
+.card-3d-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 8;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  mix-blend-mode: overlay;
+}
+
+.has-3d-tilt:hover .card-3d-glare {
+  opacity: 1;
+}
+
+[data-theme="light"] .card-3d-glare {
+  mix-blend-mode: soft-light;
+}
+
+/* Layered 3D Z-Depth for nested elements */
+.has-3d-tilt .project-thumb-wrap,
+.has-3d-tilt .service-icon-box,
+.has-3d-tilt .step-number,
+.has-3d-tilt .about-avatar-wrap {
+  transform: translateZ(28px);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.has-3d-tilt .project-actions,
+.has-3d-tilt .btn {
+  transform: translateZ(32px);
+  transition: transform 0.25s ease;
+}
+
+.has-3d-tilt .project-tech-tags,
+.has-3d-tilt .service-features-list {
+  transform: translateZ(18px);
+}
+
+.has-3d-tilt .project-title,
+.has-3d-tilt .service-title {
+  transform: translateZ(22px);
+}
+
+/* 3. Hero 3D Interactive Badge */
+.hero-3d-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(0, 242, 254, 0.07);
+  border: 1px solid rgba(0, 242, 254, 0.22);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-cyan);
+  margin-top: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.hero-3d-indicator:hover {
+  background: rgba(0, 242, 254, 0.14);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+  transform: translateY(-2px) scale(1.02);
+}
+
+[data-theme="light"] .hero-3d-indicator {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.25);
+  color: #2563eb;
+}
+
+[data-theme="light"] .hero-3d-indicator:hover {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: #2563eb;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+}
+
+.indicator-dot-3d {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 10px var(--accent-cyan);
+  position: relative;
+}
+
+.indicator-dot-3d::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-cyan);
+  animation: pingDot 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pingDot {
+  0% { transform: scale(0.9); opacity: 1; }
+  75%, 100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* 4. Smooth 3D Hover Elevations for Interactive Buttons */
+.btn {
+  transform-style: preserve-3d;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.22s ease,
+              background-color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px) translateZ(8px);
+}
+
+.btn:active {
+  transform: translateY(1px) translateZ(0);
+}
+
+/* 5. 3D Keyframe Animations for Floating Badges & Accents */
+@keyframes float3D {
+  0% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotateX(4deg) rotateY(-4deg);
+  }
+  100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+.floating-3d-element {
+  animation: float3D 6s ease-in-out infinite;
+}
+
+/* 6. Mobile & Reduced Motion Fallbacks */
+@media (max-width: 768px) {
+  #webgl-3d-scene {
+    opacity: 0.7;
+  }
+  
+  .has-3d-tilt {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #webgl-3d-scene {
+    display: none;
+  }
+  
+  .has-3d-tilt {
+    transform: none !important;
+  }
+  
+  .floating-3d-element {
+    animation: none;
+  }
+}

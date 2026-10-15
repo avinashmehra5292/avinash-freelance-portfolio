@@ -195,8 +195,8 @@ function initProjectShowcase() {
   if (!grid || !window.PROJECTS_DATA) return;
 
   function renderProjects(category = 'all') {
-    const filtered = category === 'all' 
-      ? window.PROJECTS_DATA 
+    const filtered = category === 'all'
+      ? window.PROJECTS_DATA
       : window.PROJECTS_DATA.filter(p => p.category === category);
 
     grid.innerHTML = filtered.map(proj => `
@@ -220,18 +220,6 @@ function initProjectShowcase() {
             <span class="project-year">${proj.year}</span>
           </div>
           <p class="project-summary">${proj.summary}</p>
-          
-          <div class="project-metrics-ribbon">
-            ${proj.metrics.map(m => `
-              <div class="metric-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                  <polyline points="17 6 23 6 23 12"></polyline>
-                </svg>
-                <span><strong>${m.value}</strong> ${m.label}</span>
-              </div>
-            `).join('')}
-          </div>
 
           <div class="project-tech-tags">
             ${proj.tech.slice(0, 5).map(t => `<span class="tech-tag">${t}</span>`).join('')}
@@ -278,10 +266,10 @@ function initCaseStudyModal() {
   const modalContent = document.getElementById('modal-dynamic-body');
   if (!modal || !modalContent) return;
 
-  window.openCaseStudyById = function(projectId) {
-    const proj = window.PROJECTS_DATA.find(p => 
-      p.id === projectId || 
-      p.title === projectId || 
+  window.openCaseStudyById = function (projectId) {
+    const proj = window.PROJECTS_DATA.find(p =>
+      p.id === projectId ||
+      p.title === projectId ||
       (p.id && p.id.toLowerCase() === (projectId || '').toLowerCase())
     );
     if (!proj) return;
@@ -307,15 +295,6 @@ function initCaseStudyModal() {
         </div>
 
         <p class="case-study-text">${proj.caseStudy.overview}</p>
-
-        <div class="case-study-metrics-grid">
-          ${proj.metrics.map(m => `
-            <div class="cs-metric-card">
-              <div class="cs-metric-val">${m.value}</div>
-              <div class="cs-metric-label">${m.label}</div>
-            </div>
-          `).join('')}
-        </div>
 
         <div class="case-study-section">
           <h3 class="case-study-heading">
@@ -353,15 +332,6 @@ function initCaseStudyModal() {
           <h3 class="case-study-heading">Technology Stack Utilized</h3>
           <div class="project-tech-tags" style="margin-top: 10px;">
             ${proj.tech.map(t => `<span class="tech-tag" style="padding: 6px 14px; font-size: 0.86rem;">${t}</span>`).join('')}
-          </div>
-        </div>
-
-        <div class="testimonial-card case-study-testimonial" style="margin-top: 36px;">
-          <div class="stars-row">★★★★★</div>
-          <p class="testimonial-quote">"${proj.caseStudy.testimonial.quote}"</p>
-          <div class="author-info">
-            <h4 style="color: var(--accent-cyan);">${proj.caseStudy.testimonial.author}</h4>
-            <p>${proj.caseStudy.testimonial.role}</p>
           </div>
         </div>
 
@@ -795,7 +765,7 @@ function initClipboardButtons() {
 /* --------------------------------------------------------------------------
    11. TOAST NOTIFICATION HELPER
    -------------------------------------------------------------------------- */
-window.showToast = function(message, type = 'info') {
+window.showToast = function (message, type = 'info') {
   let container = document.querySelector('.toast-container');
   if (!container) {
     container = document.createElement('div');
@@ -807,9 +777,9 @@ window.showToast = function(message, type = 'info') {
   toast.className = `toast ${type}`;
   toast.innerHTML = `
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      ${type === 'success' 
-        ? '<polyline points="20 6 9 17 4 12"></polyline>' 
-        : '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>'}
+      ${type === 'success'
+      ? '<polyline points="20 6 9 17 4 12"></polyline>'
+      : '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>'}
     </svg>
     <span>${message}</span>
   `;
